@@ -3,6 +3,7 @@
     "enable_reconstruct": true,
     "files": {
         "input_0.png"         : "Input image",
+        "src-bitmap.png"      : "Input scaled",
         "result.png"          : "Output image",
         "stdout.txt"          : "Output text file"
     },
@@ -62,11 +63,14 @@
             "type": "gallery",
             "contents":
             {
-                "Input Image" : {
+                "Input basic scale" : {
                     "img": "src-bitmap.png"
                 },
                 "output Zoomed image": {
                     "img": "result.png"
+                },
+                "input_src": {
+                    "img": "input_0.png"
                 }
             }
     },
