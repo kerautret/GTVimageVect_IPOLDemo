@@ -3,7 +3,7 @@
     "enable_reconstruct": true,
     "files": {
         "input_0.png"         : "Input image",
-        "output.png"          : "Output image",
+        "result.png"          : "Output image",
         "stdout.txt"          : "Output text file"
     },
     "info": {
@@ -13,7 +13,7 @@
   "build": {
     "build1": {
       "url": "http://ker.iutsd.univ-lorraine.fr/GTVimageVect.tar.gz",
-      "construct": "git clone https://github.com/DGtal-team/DGtal.git; cd DGtal; mkdir build; cd build; cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF; make; cd ../../GTVimageVect; mkdir build; cd build; cmake .. -DDGtal_DIR=\"../../DGtal/build\" cd GTVimageVect && ls",
+      "construct": "git clone https://github.com/DGtal-team/DGtal.git; cd DGtal; mkdir build; cd build; cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_BUILD_TYPE:string=\"Release\"; make; cd ../../GTVimageVect; mkdir build; cd build; cmake .. -DCMAKE_BUILD_TYPE:string=\"Release\" -DDGtal_DIR=\"/home/ipol/ipolDevel/ipol_demo/modules/demorunner/binaries/77777000076/src/DGtal/build\"; make ",
       "move": "GTVimageVect/build/tv-triangulation-color"
     }
   },
@@ -25,7 +25,7 @@
       "Click on an image or upload one to use it as the algorithm input."
     ],
     "param_description": [
-      "Set the type of operation, the parameters and run the algorithm."
+      "You can choose the zoom parameter and run the algorithm."
     ],
     "xlink_article": "https://www.ipol.im/",
     "timeout": 600
@@ -41,41 +41,41 @@
             "max_weight": "50*1024*1024"
     }
   ],
-  "params": [
-      {
-          "visible": "params.type==1",
-          "id": "a param",
-          "label": "param",
+
+"params": [
+    {
+          "id": "zoomfactor",
+          "label": "Choose the zoom factor",
           "type": "range",
+          "comments": "Set the resulting zoom factor.",
           "values": {
-                "default": 0.5,
-                "max": 100,
-                "min": -100,
-                "step": 0.01
+                "default": 16,
+                "max": 32,
+                "min": 1,
+                "step": 1
           }
       }
   ],
+  
   "results": [
     {
-            "contents": "'Warning: In order to be displayed, the interpolated images are saved as PNG files instead of TIFF files. It entails a loss of information. In addition, displayed images may be interpolated by the browser and may differ from the computed PNG files.'",
-            "type": "message"
-    },
-    {
-        "contents": {
-            "Output texture": {
-                "img": "result.png"
-            },
-            "Input texture": {
-                "img": "input_0.png"
+            "type": "gallery",
+            "contents":
+            {
+                "Input Image" : {
+                    "img": "src-bitmap.png"
+                },
+                "output Zoomed image": {
+                    "img": "result.png"
+                }
             }
-        },
-        "type": "gallery"
     },
+    
     {
             "contents": "stdout.txt", 
             "label": "Output", 
             "type": "text_file"
     }
   ],
-  "run":  "${demoextras}/run.sh input_0.png result.png $type $interp \"$transform\" $dx $dy $factor"
+  "run":  "${demoextras}/DemoExtras/run.sh  ${demoextras}  input_0.png $zoomfactor result.png   "
 }
