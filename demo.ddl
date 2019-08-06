@@ -5,8 +5,13 @@
         "input_0.png"         : "Input image",
         "src-bitmap.png"      : "Input scaled",
         "result.png"          : "Output image",
+        "result.pdf"          : "Output image (pdf)",
+        "result.eps"          : "Output image (eps)",
         "stdout.txt"          : "Output text file"
     },
+    "param": [
+        "zoomfactor"
+    ],
     "info": {
             "run_time": "run time"
         }
@@ -33,7 +38,7 @@
   },
   "inputs": [
     {
-            "description": "Input image",
+            "description": "Input image (png, jpeg, (no gif nor ppm))",
             "required": true,
             "max_pixels": 100000000,
             "dtype": "x",
@@ -48,6 +53,7 @@
           "id": "zoomfactor",
           "label": "Choose the zoom factor",
           "type": "range",
+          "visible": true,
           "comments": "Set the resulting zoom factor.",
           "values": {
                 "default": 16,
@@ -74,7 +80,24 @@
                 }
             }
     },
-    
+    {
+        "type": "file_download",
+        "label": "<h3> You can download resulting file here:</h3>",
+        "contents" : {
+            "Resulting zoomed image (png)": "result.png",
+            "Resulting zoomed image (eps)": "result.eps",
+            "Resulting zoomed image (pdf)": "result.pdf"
+
+        }
+    },
+     {
+        "type": "file_download",
+        "label": "<h3> You also get the source files here:</h3>",
+        "contents" : {
+            "Input image (png)": "input_0.png",
+            "Rescaled image (by convert rescale option)": "src-bitmap.png"
+        }
+    },
     {
             "contents": "stdout.txt", 
             "label": "Output", 
