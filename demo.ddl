@@ -24,7 +24,7 @@
     }
   },
   "general": {
-    "description": "Demonstration of the paper \"Geometric Total Variation for Image Vectorization, Zooming and Pixel Art Depixelizing\" \n source code also available on a github repository: <a href=\"https://github.com/kerautret/GTVimageVect\"> https://github.com/kerautret/GTVimageVect</a> ", 
+    "description": "<h4>Demonstration of the paper \"Geometric Total Variation for Image Vectorization, Zooming and Pixel Art Depixelizing\" (B. Kerautret and J.-O Lachaud, 2019, submitted)</h4> <b>Source code and comparisons:</b>  available on a github repository: <a href=\"https://github.com/kerautret/GTVimageVect\"> https://github.com/kerautret/GTVimageVect</a> ", 
     "requirements":"DEBIAN_STABLE",
     "demo_title": "Geometric Total Variation for Image Vectorization, Zooming and Pixel Art Depixelizing",
     "input_description": [
