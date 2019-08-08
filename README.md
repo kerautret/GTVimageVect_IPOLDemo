@@ -9,4 +9,4 @@ Online demonstratipn : [her](ehttps://ipolcore.ipol.im/demo/clientApp/demo.html?
 To install the demonstration:
   - Copy/past the DDL file.
   - Make and upload demoExtras.tar.gz
-  - Update the [source code](https://github.com/kerautret/GTVimageVect}  archive on webserver mentionned in the DDL file. 
+  - Update the [source code](https://github.com/kerautret/GTVimageVect)  archive on webserver mentionned in the DDL file. 
