@@ -10,7 +10,7 @@ OUTPUT=$4
 
 EXEC=tv-triangulation-color
 convert $INPUT inputPPM.ppm
-${EXEC} -i inputPPM.ppm -b ${ZOOMFACTOR} -D 16 -o output -C result.eps --epsScale 2
+${EXEC} -i inputPPM.ppm -b ${ZOOMFACTOR} -D 16 -o output -C result.eps result.svg 
 mv output-2nd.png ${OUTPUT}
 convert  -scale "${ZOOMFACTOR}00%" inputPPM.ppm src-bitmap.png
 convert -crop -${ZOOMFACTORM1}-${ZOOMFACTORM1} src-bitmap.png src-bitmap.png 

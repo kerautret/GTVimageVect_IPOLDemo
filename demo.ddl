@@ -5,8 +5,9 @@
         "input_0.png"         : "Input image",
         "src-bitmap.png"      : "Input scaled",
         "result.png"          : "Output image",
-        "result.pdf"          : "Output image (pdf)",
-        "result.eps"          : "Output image (eps)",
+        "result.pdf"          : "Resulting vectorial representation (pdf)",
+        "result.eps"          : "Resulting vectorial representation (eps)",
+        "result.svg"          : "Resulting vectorial representation (svg)",  
         "stdout.txt"          : "Output text file"
     },
     "param": [
@@ -20,7 +21,7 @@
     "build1": {
       "url": "http://ker.iutsd.univ-lorraine.fr/GTVimageVect.tar.gz",
       "construct": "git clone https://github.com/DGtal-team/DGtal.git; cd DGtal; mkdir build; cd build; cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_BUILD_TYPE:string=\"Release\"; make; cd ../../GTVimageVect; mkdir build; cd build; cmake .. -DCMAKE_BUILD_TYPE:string=\"Release\" -DDGtal_DIR=\"/home/ipol/ipolDevel/ipol_demo/modules/demorunner/binaries/77777000076/src/DGtal/build\"; make ",
-      "move": "GTVimageVect/build/tv-triangulation-color"
+      "move": "GTVimageVect/build/bin/tv-triangulation-color"
     }
   },
   "general": {
@@ -85,8 +86,10 @@
         "label": "<h3> You can download resulting file here:</h3>",
         "contents" : {
             "Resulting zoomed image (png)": "result.png",
-            "Resulting zoomed image (eps)": "result.eps",
-            "Resulting zoomed image (pdf)": "result.pdf"
+            "Resulting vectorial representation (eps)": "result.eps",
+            "Resulting vectorial representation (pdf)": "result.pdf",
+            "Resulting vectorial representation (svg)": "result.svg"
+
 
         }
     },
