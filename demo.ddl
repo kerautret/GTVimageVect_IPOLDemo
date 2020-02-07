@@ -20,7 +20,7 @@
   "build": {
     "build1": {
       "url": "http://ker.iutsd.univ-lorraine.fr/GTVimageVect.tar.gz",
-      "construct": "git clone https://github.com/DGtal-team/DGtal.git; cd DGtal; mkdir build; cd build; cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_BUILD_TYPE:string=\"Release\"; make; cd ../../GTVimageVect; mkdir build; cd build; cmake .. -DCMAKE_BUILD_TYPE:string=\"Release\" -DDGtal_DIR=\"/home/ipol/ipolDevel/ipol_demo/modules/demorunner/binaries/77777000076/src/DGtal/build\"; make ",
+      "construct": "git clone https://github.com/DGtal-team/DGtal.git; cd DGtal; mkdir build; cd build; cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_BUILD_TYPE:string=\"Release\"; make; cd ../../GTVimageVect; mkdir build; cd build; cmake .. -DCMAKE_BUILD_TYPE:string=\"Release\" -DDGtal_DIR=\"/home/ipol/ipolDevel/ipol_demo/modules/demorunner/binaries/280/src/DGtal/build\"; make ",
       "move": "GTVimageVect/build/bin/tv-triangulation-color"
     }
   },
