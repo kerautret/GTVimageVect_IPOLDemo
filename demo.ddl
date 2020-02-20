@@ -5,9 +5,9 @@
         "input_0.png"         : "Input image",
         "src-bitmap.png"      : "Input scaled",
         "result.png"          : "Output image",
-        "result.pdf"          : "Resulting vectorial representation (pdf)",
-        "result.eps"          : "Resulting vectorial representation (eps)",
-        "result.svg"          : "Resulting vectorial representation (svg)",  
+        "result.pdf"          : "result.pdf",
+        "result.eps"          : "result.eps",
+        "result.svg"          : "result.svg",  
         "stdout.txt"          : "Output text file"
     },
     "param": [
